@@ -60,6 +60,13 @@ Models used
 1. U-net with MobileNetv2 (https://arxiv.org/abs/1801.04381v4) as encoder:
 2. RESU-net (https://arxiv.org/pdf/1904.00592.pdf) with Residual Net with VGG 19 as encoder element
 
+### Strategy
+The focus was on smaller models which can provide good predictions.
+1. MobileNetv2 was used as it is one of the smallest model (least learning parameters), further alpha was adjusted so that parameters are even lesser
+2. RESU-net was used as it was specifically designed for satellite image segmentation. Again it is a deep network, but not big (number of learing parameters are not high)
+3. Upsampling is used in decoder instead of Transpose Convolution - this is to reduce number of parameters
+4. Custom U-net was also created, but the prediction power was not great.
+
 Changes from the original U-net to the employed models
 1. The original U-net had different input and ouput sizes in width and height, the employed models had same input size and ouput size with respect to width and height
 2. Before the skip connection were concatenated, they were cropped also, the employed models have sizes in power of 2, so no cropping is required
@@ -131,8 +138,12 @@ User can select a file and then see the prediction side by side.
 1. The model selected (on which the inference is requried) has to be selected manually in code. this can be automated / understood from UI also 
 
 ### Future Work
-1. Look at ways to increase metrics in lower compute
-2. Better design model inferecing
-3. Containerize the application
+1. Training for more epochs
+2. Look at ways to increase metrics in lower compute
+3. Better design model inferencing
+4. Containerize the application
+5. Albation study 
+6. Use of learning rate finder
+7. More regularization is requried to reduce overfitting
 
 
