@@ -22,8 +22,7 @@ The dataset is split into training (from where train and validation data is extr
 
 Observations
 1. Training input has around 1105 files while training output has around 804 files, i.e. only 73% input images have corresponding ouput images.
-2. Testing input and output has got 13 files each, however some output files (3 in number) are not aligned to input files
-3. Number of black pixels in output files are far more than number of white pixels, as much as 19 times. It is an unbalanced dataset for models
+2. Number of black pixels in output files are far more than number of white pixels, as much as 19 times. It is an unbalanced dataset for models
 
 
 ### Dataset download
