@@ -2,6 +2,12 @@
 
 The world is everchanging, each day a new tree is planted, another one cut, a new road built and other one changed. It is difficult to manually note all the changes happening on the world terrain and this is where satellite imagery is used to understand the world better. However, the number of things (classes) to understand from satellite imagery is an arduous task manually. Intelligent computer systems using convolution neural networks (CNN) have been of great help to understand these. They have come a long way from identifying image in a picture (cat or dog) to identifying each pixel in the image as what it represents. The problem posed is an image segmentation problem where from the RGB satellite imagery, roads are required to be understood. The problem poses itself as a binary class problem – Road (1) or No-Road (0) for each pixel. The idea is to predict at pixel level as to which class the pixel can attributed.
 
+**Files / Code**
+1. EDA 
+2. Training Pipeline
+3. Prediction (Testing Batch) Pipeline 
+4. Serving / Individual Inference
+
 ## Dataset
 
 Dataset Link: https://www.kaggle.com/insaff/massachusetts-roads-dataset
