@@ -57,13 +57,13 @@ Researching on image segmentation - Unet (U-Net: Convolutional Networks for Biom
 
 Models used
 1. U-net with MobileNetv2 (https://arxiv.org/abs/1801.04381v4) as encoder:
-2. RESU-net (https://arxiv.org/pdf/1904.00592.pdf) with Residual Net with VGG 19 as encoder element
+2. RESU-net (https://arxiv.org/pdf/1711.10684.pdf) with Residual Net
 
 ### Strategy
 The focus was on smaller models which can provide good predictions.
-1. MobileNetv2 was used as it is one of the smallest model (least learning parameters), further alpha was adjusted so that parameters are even lesser
-2. RESU-net was used as it was specifically designed for satellite image segmentation. Again it is a deep network, but not big (number of learing parameters are not high)
-3. Upsampling is used in decoder instead of Transpose Convolution - this is to reduce number of parameters
+1. MobileNetv2 was used as it is one of the smallest model (least learning parameters), further alpha was adjusted so that parameters are even lesser.
+2. Upsampling is used in decoder instead of Transpose Convolution - this is to reduce number of parameters
+3. RESU-net was used as it was specifically designed for satellite image segmentation. Again it is a deep network, but not big (number of learing parameters are not high)
 4. Custom U-net was also created, but the prediction power was not great.
 
 Changes from the original U-net to the employed models
